@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MatchMeter — Will your resume survive the ATS?</title>
+<meta name="description" content="Paste your resume and any job description. Get a match score, the keywords you're missing, and exactly what to fix — in 30 seconds. 100% private, runs in your browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23059669'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>M</text></svg>">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="index.html"><span class="logo-mark">M</span> MatchMeter</a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="app.html">Try free</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> 100% private — runs entirely in your browser</span>
+      <h1>Stop getting ghosted by <span class="grad">the ATS.</span></h1>
+      <p class="sub">Paste your resume and any job description. MatchMeter scores the match, surfaces the keywords you're missing, and tells you exactly what to fix — in about 30 seconds. No sign-up. Nothing uploaded.</p>
+      <div class="hero-cta">
+        <a class="btn btn-dark" href="app.html">Analyze my resume — free</a>
+        <a class="btn btn-outline-light" href="#how">See how it works</a>
+      </div>
+      <div class="hero-proof">
+        <span class="proof"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> 3 free scans, no account</span>
+        <span class="proof"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Your resume never leaves your device</span>
+        <span class="proof"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg> Built for real job descriptions</span>
+      </div>
+    </div>
+    <div class="sample-card" aria-label="Sample analysis preview">
+      <div class="sample-head"><span>Sample analysis</span><span>Senior Data Analyst</span></div>
+      <div class="ring-wrap">
+        <svg class="ring" width="120" height="120" viewBox="0 0 120 120">
+          <defs>
+            <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#6ee7b7"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-bg" cx="60" cy="60" r="52" fill="none" stroke-width="11"/>
+          <circle class="ring-fg" id="heroRing" cx="60" cy="60" r="52" fill="none" stroke-width="11"
+                  stroke-dasharray="326.7" stroke-dashoffset="326.7" data-score="73"/>
+        </svg>
+        <div>
+          <div class="ring-num" style="color:#fff"><span id="heroNum">0</span></div>
+          <div class="ring-label">Good match</div>
+          <div class="ring-sub">A few targeted tweaks could put this application over the top.</div>
+        </div>
+      </div>
+      <div class="pill-row">
+        <span class="pill miss">dbt</span>
+        <span class="pill miss">data governance</span>
+        <span class="pill miss">data quality</span>
+        <span class="pill hit">sql</span>
+        <span class="pill hit">tableau</span>
+        <span class="pill hit">python</span>
+      </div>
+      <p class="sample-cap">Illustrative sample — your results are computed live from your own text.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="how">
+  <div class="wrap">
+    <p class="kicker">How it works</p>
+    <h2>From posting to tailored resume<br>in three steps.</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Paste two texts</h3>
+        <p>Drop in your resume and the job description. Copy-paste from anywhere — LinkedIn, Indeed, a PDF. Try the built-in samples first if you're curious.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Get your score</h3>
+        <p>See a 0–100 match score plus every keyword the posting emphasizes — split into matched, missing, tools &amp; tech, and skills &amp; methods.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Fix and re-run</h3>
+        <p>Get concrete suggestions for your top gaps, weave them into your bullets where they're true, and re-run to watch your score climb.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="pricing">
+  <div class="wrap">
+    <p class="kicker">Pricing</p>
+    <h2>Simple, honest pricing.</h2>
+    <p class="lede">Start free. Pay once if it helps you land interviews — less than a coffee.</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Starter</h3>
+        <div class="price">$0</div>
+        <ul>
+          <li><span class="check">✓</span> <span><b>3 full analyses</b>, free</span></li>
+          <li><span class="check">✓</span> <span>Match score + missing keywords</span></li>
+          <li><span class="check">✓</span> <span>Fix suggestions</span></li>
+          <li><span class="check">✓</span> <span>100% private — nothing uploaded</span></li>
+        </ul>
+        <a class="btn btn-ghost btn-block" href="app.html">Start free</a>
+      </div>
+      <div class="plan featured">
+        <span class="plan-tag">Most popular</span>
+        <h3>Unlimited</h3>
+        <div class="price">$4.99 <small>one-time</small></div>
+        <ul>
+          <li><span class="check">✓</span> <span><b>Unlimited analyses</b>, forever</span></li>
+          <li><span class="check">✓</span> <span>Every job you apply to, scored</span></li>
+          <li><span class="check">✓</span> <span>All Starter features</span></li>
+          <li><span class="check">✓</span> <span>No subscription, no account</span></li>
+        </ul>
+        <a class="btn btn-primary btn-block" href="app.html">Get unlimited</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <p class="kicker">FAQ</p>
+    <h2>Questions, answered.</h2>
+    <div class="faq">
+      <details>
+        <summary>Is my resume uploaded anywhere?</summary>
+        <p>No. All analysis happens locally in your browser with JavaScript. Your resume text is never sent to a server — there isn't even a server to send it to. You can verify this by disconnecting from the internet after the page loads; it still works.</p>
+      </details>
+      <details>
+        <summary>How accurate is the match score?</summary>
+        <p>The score measures how much of the job description's weighted keyword vocabulary appears in your resume, with extra weight on tools, skills, and multi-word phrases. It's a strong signal for ATS-style filtering, not a guarantee — no tool can promise an interview. Use it to catch blind spots before you apply.</p>
+      </details>
+      <details>
+        <summary>Should I just stuff keywords into my resume?</summary>
+        <p>No — add keywords only where they're true. Recruiters spot stuffing instantly, and lying about skills backfires in interviews. The suggestions tell you where each gap matters so you can represent real experience in the posting's language.</p>
+      </details>
+      <details>
+        <summary>Why a one-time payment instead of a subscription?</summary>
+        <p>Job hunting is temporary (hopefully). A $4.99 one-time unlock is cheaper and more honest than a subscription you'll forget to cancel the month you get hired.</p>
+      </details>
+      <details>
+        <summary>What if it doesn't help me?</summary>
+        <p>Email us within 14 days and we'll refund you, no questions asked. We're a tiny operation — your trust matters more than $4.99.</p>
+      </details>
+    </div>
+    <div style="margin-top:44px; text-align:center">
+      <a class="btn btn-primary" href="app.html">Try your first free scan</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <a class="logo" href="index.html" style="font-size:16px"><span class="logo-mark" style="width:26px;height:26px;font-size:14px">M</span> MatchMeter</a>
+    <span>Private by design · Built for job seekers · © 2026</span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var ring = document.getElementById('heroRing');
+  var num = document.getElementById('heroNum');
+  var score = parseInt(ring.getAttribute('data-score'), 10);
+  var C = 326.7, target = C - (C * score / 100);
+  function animate() {
+    requestAnimationFrame(function () {
+      ring.style.strokeDashoffset = target;
+      var start = null;
+      function tick(t) {
+        if (!start) start = t;
+        var p = Math.min((t - start) / 1100, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        num.textContent = Math.round(eased * score);
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { animate(); io.disconnect(); } });
+    }, { threshold: 0.4 });
+    io.observe(ring);
+  } else { animate(); }
+})();
+</script>
+</body>
+</html>
