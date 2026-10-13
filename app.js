@@ -6,7 +6,7 @@
    CONFIG — swap in your real Stripe Payment Link when ready.
    Create one in Stripe Dashboard → Payment Links ($4.99 one-time).
 ------------------------------------------------------------------ */
-const STRIPE_PAYMENT_URL = 'https://buy.stripe.com/REPLACE_WITH_YOUR_LINK';
+const STRIPE_PAYMENT_URL = 'https://buy.stripe.com/00w14ngLnfWx44OcAbejK01';
 const FREE_SCANS = 3;
 
 /* ---------------- sample data ---------------- */
@@ -121,11 +121,8 @@ $('resumeFile').addEventListener('change', (e) => {
 function showPaywall() { $('paywall').classList.add('show'); }
 function hidePaywall() { $('paywall').classList.remove('show'); }
 $('payBtn').addEventListener('click', () => {
-  if (STRIPE_PAYMENT_URL.indexOf('REPLACE_WITH') !== -1) {
-    // No real link configured yet — treat as demo unlock with a clear note.
-    alert('Demo mode: no Stripe link configured yet. Unlocking for preview.');
-    unlock();
-  }
+  // Real Stripe link opens in a new tab; unlock happens on return via ?paid=1
+  // or the "I already paid" button below.
 });
 $('alreadyPaidBtn').addEventListener('click', () => { unlock(); hidePaywall(); });
 $('closePaywallBtn').addEventListener('click', hidePaywall);
@@ -265,3 +262,18 @@ function fallbackCopy(text, done) {
 /* ---------------- init ---------------- */
 refreshCounts();
 refreshScanUI();
+
+// Auto-unlock when Stripe redirects back after successful payment (?paid=1).
+(function handlePaidReturn() {
+  try {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('paid') === '1') {
+      if (!isUnlocked()) unlock();
+      params.delete('paid');
+      const qs = params.toString();
+      const clean = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+      window.history.replaceState({}, '', clean);
+      $('scanNote').textContent = 'Payment confirmed — unlimited plan active. Analyze away.';
+    }
+  } catch (e) { /* noop */ }
+})();
